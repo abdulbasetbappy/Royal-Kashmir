@@ -12,7 +12,7 @@
                     <span>or use your email password</span>
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Password">
-                    <a href="#">→ Forget Your Password? ←</a>
+                    <input type="password" placeholder="Confirm Password">
                     <button>
                         <router-link to="/login">Sign up</router-link>
                     </button>
@@ -23,7 +23,7 @@
                     <div class="toggle-panel">
                         <h1>Hello, Friend!</h1>
                         <p>Register with your personal details to use all of site features</p>
-                        <button class="hidden" id="register"><router-link to="registration">Sign in</router-link></button>
+                        <button class="hidden" id="register"><router-link to="login">Sign in</router-link></button>
                     </div>
                 </div>
             </div>

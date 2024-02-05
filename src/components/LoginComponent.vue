@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-        <div class="form-container sign-in">
+        <div class="form-container">
             <form>
                 <h1>Sign In</h1>
                 <div class="social-icons">
@@ -16,6 +16,7 @@
                 <button>
                     <router-link to="/login">Sign In</router-link>
                 </button>
+                <p href="#"> Create Account? <router-link to="/Registration">Sign Up</router-link></p>
             </form>
         </div>
         <div class="toggle-container">

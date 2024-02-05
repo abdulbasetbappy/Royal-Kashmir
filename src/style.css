@@ -6,3 +6,8 @@
     height: 100%;
     font-family: 'Croissant One', sans-serif;
 }
+
+* > h1,h2,h3,h4,h5,h6,p,a,input,span,select,textarea,button{
+height: fit-content;
+width: fit-content;
+}
