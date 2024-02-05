@@ -2,11 +2,9 @@
 @import '../base/mixins';
 @import '../base/variables';
 
-//All mixins Only for this Page
-
 // Main Styles Starts Here
 .footer {
-  width: 90%;
+  width: 95%;
   margin: auto;
   height: fit-content;
   &__container {
@@ -244,7 +242,6 @@
 
 //reset of Responsive Styles
 @include respond-to(0px, 480px){
- @include reset-browser();
  .footer{
   width: 100%;
   &__container{
@@ -271,7 +268,6 @@
 }
 //reset of Responsive Styles
 @include respond-to($min-width:481px, $max-width:768px){
-  @include reset-browser();
  .footer{
   width: 100%;
   &__container{
@@ -325,4 +321,126 @@ height: 50px;
     }
   }
  }
+}
+//reset of Responsive Styles
+@include respond-to($min-width:769px, $max-width:1024px){
+ .footer{
+  width: 100%;
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__firstcolumn{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__secondcolumn{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h3{
+        height: 50px;
+      }
+      .social__icons{
+        .icon{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &__thirdcolumn{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h3{
+height: 50px;
+      }
+      hr{
+        height: 2px;
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__fourthcolumn{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h3{
+        height: 50px;
+      }
+      hr{
+        height: 2px;
+      }
+      .install_logo{}
+    }
+  }
+ }
+}
+//reset of Responsive Styles
+@include respond-to($min-width:1025px, $max-width:1200px){
+  .footer {
+    width: 95%;
+    &__container {
+
+      /*----------- Columns --------*/
+      &__secondcolumn{
+        width: 23%;
+        .social__icons{
+          .icon {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+      &__thirdcolumn{
+        width: 20%;
+      }
+    }
+  }
+}
+//reset of Responsive Styles
+@include respond-to($min-width:1201px, $max-width:1400px){
+  .footer {
+    width: 95%;
+    &__container {
+
+      /*----------- Columns --------*/
+      &__secondcolumn{
+        width: 23%;
+        .social__icons{
+          .icon {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+      &__thirdcolumn{
+        width: 20%;
+      }
+    }
+  }
+}
+//reset of Responsive Styles
+@include respond-to($min-width:1401px, $max-width:2600px){
+  .footer {
+    width: 1400px;
+    &__container {
+
+      /*----------- Columns --------*/
+      &__secondcolumn{
+        width: 23%;
+        .social__icons{
+          .icon {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+      &__thirdcolumn{
+        width: 20%;
+      }
+    }
+  }
 }
