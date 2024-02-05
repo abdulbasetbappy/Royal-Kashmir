@@ -5,32 +5,15 @@
   <router-view />
 </template>
 
-<style >
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease-in-out;
+<style lang="scss" scoped>
+@import './styles/main.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: 'Croissant One', sans-serif;
+    overflow-x: hidden;
 }
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #4d4d4d #ffffff;
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #6d6d6d;
-    border-radius: 12px;
-    border: 0px solid #ffffff;
-  }
 </style>

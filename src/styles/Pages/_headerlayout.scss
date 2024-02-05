@@ -1,0 +1,395 @@
+//Import Google Fonts, Mixins & Variables
+@import "../base/mixins";
+@import "../base/variables";
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+
+//Main Header Styles
+.nav {
+  margin: auto;
+  width: 95%;
+  background: #e4e4e470;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.247);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 80px;
+  z-index: 999;
+  //Header Logo Styles
+  &__logo {
+    position: absolute;
+    background-color: #333;
+    box-shadow: -5px 7px 12px 0px rgba(0, 0, 0, 0.75);
+    display: inline-block;
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 0px 0px 20px 20px;
+    img {
+      @include image($width: 110px, $height: 90px);
+    }
+  }
+  //Header Right Side Icons Design
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 30px;
+    gap: 20px;
+    width: 20%;
+    .cart_icon {
+      height: 25px;
+      width: 25px;
+      color: $deep-dark;
+      font-size: 25px;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        color: $brand-color-dark;
+      }
+    }
+    button {
+      height: fit-content;
+      width: fit-content;
+      border: none;
+      background: transparent;
+      a {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: $deep-dark;
+        padding: 8px 14px;
+        border-radius: $border-radius-sm;
+        background-color: $brand-color-dark;
+      }
+    }
+  }
+  //Header Centred Navigation Menu Design
+  &__items {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      li {
+        list-style: none;
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+        a {
+          text-decoration: none;
+          color: $deep-dark;
+          font-size: 21px;
+          margin: 0px 20px;
+          transition: all 0.5s;
+          &:hover {
+            color: $brand-color-dark;
+          }
+        }
+      }
+    }
+  }
+  &__bar {
+    display: none;
+  }
+}
+//Responsive For Extra Small Devices Only
+@include respond-to(0px, 480px) {
+  .nav {
+    width: 100%;
+    height: 70px;
+    border-radius: 0px;
+    overflow: visible;
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 90px;
+      height: 90px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 70px, $height: 60px);
+      }
+    }
+    &__icons {
+      display: none;
+    }
+    &__items {
+      display: none;
+    }
+    &__bar {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .bars {
+        color: $deep-dark;
+        font-size: 10px;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+//Responsive For Small Devices Only
+@include respond-to(481px, 768px) {
+  .nav {
+    width: 100%;
+    height: 80px;
+    border-radius: 0px;
+    overflow: visible;
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 80px, $height: 70px);
+      }
+    }
+    &__icons {
+      display: none;
+    }
+    &__items {
+      display: none;
+    }
+    &__bar {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .bars {
+        color: $deep-dark;
+        font-size: 10px;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+//Responsive For Medium Devices Only
+@include respond-to(769px, 1024px) {
+  .nav {
+    width: 100%;
+    height: 90px;
+    border-radius: 0px;
+    overflow: visible;
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 110px;
+      height: 110px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 90px, $height: 80px);
+      }
+    }
+    &__icons {
+      display: none;
+    }
+    &__items {
+      display: none;
+    }
+    &__bar {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .bars {
+        color: $deep-dark;
+        font-size: 10px;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+//Responsive For Large Devices Only
+@include respond-to(1025px, 1200px) {
+  .nav {
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 110px;
+      height: 110px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 90px, $height: 80px);
+      }
+    }
+    &__icons {
+    }
+    &__items {
+    }
+    &__bar {
+      display: none;
+    }
+  }
+}
+//Responsive For Extra Large Devices Only
+@include respond-to(1201px, 1400px) {
+  .nav {
+    height: 100px;
+    //Header Logo Styles
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 120px;
+      height: 120px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 100px, $height: 90px);
+      }
+    }
+    //Header Right Side Icons Design
+    &__icons {
+      .cart_icon {
+        height: 30px;
+        width: 30px;
+      }
+      button {
+        a {
+          font-size: 24px;
+          padding: 10px 18px;
+          .login_icon{
+            margin: 8px;
+          }
+        }
+      }
+    }
+    //Header Centred Navigation Menu Design
+    &__items {
+      margin: auto;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 130px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        li {
+          list-style: none;
+          display: flex;
+          height: fit-content;
+          width: fit-content;
+          a {
+            text-decoration: none;
+            color: $deep-dark;
+            font-size: 24px;
+            margin: 0px 20px;
+            transition: all 0.5s;
+            &:hover {
+              color: $brand-color-dark;
+            }
+          }
+        }
+      }
+    }
+    &__bar {
+      display: none;
+    }
+  }
+}
+
+//Responsive For Extra Extra Large Devices Only
+@include respond-to(1401px, 2600px) {
+  .nav {
+    width: 1400px;
+    height: 100px;
+    //Header Logo Styles
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 110px;
+      height: 110px;
+      box-shadow: none;
+      margin: 0px;
+      img {
+        @include image($width: 90px, $height: 80px);
+      }
+    }
+    //Header Right Side Icons Design
+    &__icons {
+      .cart_icon {
+        height: 30px;
+        width: 30px;
+      }
+      button {
+        a {
+          font-size: 24px;
+          padding: 10px 18px;
+          .login_icon{
+            margin: 8px;
+          }
+        }
+      }
+    }
+    //Header Centred Navigation Menu Design
+    &__items {
+      margin: auto;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 130px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        li {
+          list-style: none;
+          display: flex;
+          height: fit-content;
+          width: fit-content;
+          a {
+            text-decoration: none;
+            color: $deep-dark;
+            font-size: 24px;
+            margin: 0px 20px;
+            transition: all 0.5s;
+            &:hover {
+              color: $brand-color-dark;
+            }
+          }
+        }
+      }
+    }
+    &__bar {
+      display: none;
+    }
+  }
+}

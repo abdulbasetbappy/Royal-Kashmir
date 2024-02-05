@@ -1,0 +1,33 @@
+@import '../base/mixins' ;
+@import '../base/variables' ;
+
+.container{
+@include flex-center(center, center, column, no-wrap);
+    height: 100vh;
+    width: 100%;
+    h1{
+        font-size:5rem;
+        margin-bottom: 50px;
+    }
+    p{
+        color: $normal-dark;
+        font-size: $font-size-m;
+    }
+    button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: $border-radius-sm;
+        background-color: $brand-color-normal;
+        border: none;
+        color: $deep-dark;
+        font-size: $font-size-m;
+        a{
+            margin-left: 8px;
+            text-decoration: none;
+            color: $deep-dark;
+        }
+        &:hover{
+            background-color: $brand-color-dark;
+        }
+    }
+}

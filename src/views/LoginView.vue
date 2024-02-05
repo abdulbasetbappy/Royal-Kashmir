@@ -1,12 +1,13 @@
 <template>
     <div>
-        <HomepageComponent />
+        <LoginPageComponent />
     </div>
 </template>
 
 <script setup lang="ts">
-    import HomepageComponent from "../components/HomePageComponent.vue";
+    import LoginPageComponent from "../components/LoginComponent.vue";
 </script>
 
 <style scoped>
+
 </style>
